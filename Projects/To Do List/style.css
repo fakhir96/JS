@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(135deg, #153677, #4e085f); */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 50px;
+  background-color: aquamarine;
+  width: 400px;
+  border-radius: 20px;
+  padding: 20px 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h2 {
+  font-weight: 400;
+  color: darkred;
+}
+
+.icon {
+  width: 45px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+#add {
+  padding: 10px 35px;
+  background-color: #ff6a35;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #f1f1f1;
+  border-left: 1px solid transparent;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  transition: background-color 0.3s ease-in;
+}
+
+#add:hover {
+  background-color: blue;
+  color: white;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  /* margin-bottom: 6px; */
+  /* font-size: 14px; */
+}
+
+/* .task-list li::before{
+    content: "";
+    position: relative;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+} */
+
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.check-icon.checked {
+  background-image: url(images/checked.png);
+}
+
+.task-text {
+  flex-grow: 1;
+  color: #333;
+}
+
+.task-text.checked {
+  color: #555;
+  text-decoration: line-through;
+
+}
+
+.delete {
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  padding: 5px;
+  user-select: none;
+}
+
+.delete:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+  
+  Container
+  .container {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #todo-form input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  #todo-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #todo-form button:hover {
+    background-color: #45a049;
+  }
+  
+  #task-list {
+    list-style: none;
+  }
+  
+  #task-list li {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+  }
+  
+  .checked {
+    text-decoration: line-through;
+    color: #999;
+
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  */
