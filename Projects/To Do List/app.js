@@ -2,15 +2,50 @@ const adBtn = document.querySelector("#add")
 const inputVal = document.querySelector("input")
 const ul = document.querySelector(".task-list") 
 
-const saveData = () =>{
-    localStorage.setItem("data", ul.innerHTML)
-}
-const showTask = () =>{
-    ul.innerHTML = localStorage.getItem("data")
-}
+// Save data to localStorage
+const saveData = () => {
+    localStorage.setItem("tasks", ul.innerHTML);
+};
+
+// Load saved tasks on page load
+const showTasks = () => {
+    ul.innerHTML = localStorage.getItem("tasks") || "";
+    rebindEvents();
+};
+
+// Add event listeners to each task after loading from storage
+const rebindEvents = () => {
+    const allTasks = ul.querySelectorAll("li");
+
+    allTasks.forEach(li => {
+        const taskText = li.querySelector(".task-text");
+        const checkIcon = li.querySelector(".check-icon");
+        const deleteBtn = li.querySelector(".delete");
+
+        taskText.addEventListener("click", () => {
+            checkIcon.classList.toggle("checked");
+            taskText.classList.toggle("checked");
+            saveData();
+        });
+
+        checkIcon.addEventListener("click", () => {
+            checkIcon.classList.toggle("checked");
+            taskText.classList.toggle("checked");
+            saveData();
+        });
+
+        deleteBtn.addEventListener("click", () => {
+            ul.removeChild(li);
+            saveData();
+        });
+    });
+};
 
 const addTask = ()=>{
-    
+    if(inputVal.value === ""){
+        console.log("Nothing")
+    }
+    else{
         let li = document.createElement("li")
 
 
@@ -40,91 +75,25 @@ const addTask = ()=>{
         taskText.addEventListener("click", () => {
             checkIcon.classList.toggle("checked");
             taskText.classList.toggle("checked");
-            // saveData()
+            saveData()
         });
         checkIcon.addEventListener("click", ()=>{
             checkIcon.classList.toggle("checked");
             taskText.classList.toggle("checked");
-            // saveData()
+            saveData()
         })
-
-
+        
+        
         deleteBtn.addEventListener("click", () => {
             ul.removeChild(li);
+            saveData()
         });
+        saveData()
     }
     inputVal.value = ""
-    // saveData()
+    
+}
 
 adBtn.addEventListener("click", addTask)
 
-// showTask()
-
-
-
-
-// const form = document.getElementById("todo-form");
-// const taskInput = document.getElementById("task-input");
-// const taskList = document.getElementById("task-list");
-
-// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-// // Load tasks on page load
-// window.addEventListener("DOMContentLoaded", () => {
-//   tasks.forEach(task => renderTask(task));
-// });
-
-// // Handle form submit
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   const taskText = taskInput.value.trim();
-//   if (taskText === "") return;
-
-//   const task = {
-//     id: Date.now(),
-//     text: taskText,
-//     completed: false
-//   };
-
-//   tasks.push(task);
-//   saveTasks();
-//   renderTask(task);
-//   taskInput.value = "";
-// });
-
-// // Render a task item
-// function renderTask(task) {
-//   const li = document.createElement("li");
-//   li.dataset.id = task.id;
-
-//   if (task.completed) {
-//     li.classList.add("checked");
-//   }
-
-//   li.innerHTML = `
-//     <span class="task-text">${task.text}</span>
-//     <button class="delete-btn">Delete</button>
-//   `;
-
-//   // Toggle checked state
-//   li.querySelector(".task-text").addEventListener("click", () => {
-//     task.completed = !task.completed;
-//     li.classList.toggle("checked");
-//     saveTasks();
-//   });
-
-//   // Delete task
-//   li.querySelector(".delete-btn").addEventListener("click", () => {
-//     tasks = tasks.filter(t => t.id !== task.id);
-//     li.remove();
-//     saveTasks();
-//   });
-
-//   taskList.appendChild(li);
-// }
-
-// // Save tasks to localStorage
-// function saveTasks() {
-//   localStorage.setItem("tasks", JSON.stringify(tasks));
-// }
+showTasks()
