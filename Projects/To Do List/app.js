@@ -2,18 +2,15 @@ const adBtn = document.querySelector("#add")
 const inputVal = document.querySelector("input")
 const ul = document.querySelector(".task-list") 
 
-// const saveData = () =>{
-//     localStorage.setItem("data", ul.innerHTML)
-// }
-// const showTask = () =>{
-//     ul.innerHTML = localStorage.getItem("data")
-// }
+const saveData = () =>{
+    localStorage.setItem("data", ul.innerHTML)
+}
+const showTask = () =>{
+    ul.innerHTML = localStorage.getItem("data")
+}
 
 const addTask = ()=>{
-    if(inputVal.value === ""){
-        console.log("Nothing")
-    }
-    else{
+    
         let li = document.createElement("li")
 
 
@@ -58,7 +55,6 @@ const addTask = ()=>{
     }
     inputVal.value = ""
     // saveData()
-}
 
 adBtn.addEventListener("click", addTask)
 
