@@ -1,2 +1,78 @@
 *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    margin-top: 80px;
+    background-color: #000000;
+    width: 400px;
+    padding: 20px;
+}
+
+h2{
+    color: white;
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 3px;
+    background-color: #DC2525;
+    border: none;
+    box-shadow: 0 0 10px black;
+}
+#quest{
+    font-size: 17px;
+    color: #56DFCF;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+li{
+    font-size: 15px;
+    background-color: #FFFCFB;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    color: #131D4F;
+    transition: all 0.3s;
+}
+li:hover{
+    background-color: #222;
+    color: #fff;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:35px;
+}
+#next{
+    padding: 10px 30px;
+    font-size: 15px;
+    background-color: #00FFDE;
+    border: 1px solid #00FFDE;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+.correct{
+    background-color: green;
+    color: #fff;
+    border: 1px solid transparent;
+}
+.wrong{
+    background-color: red;
+    color: #fff;
+    border: 1px solid transparent;
 }
