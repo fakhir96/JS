@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <span class="search">
+      <input id="city_name" type="text" placeholder="London">
+      <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+    </span>
+
+    <div class="img-container">
+      <img src="" id="image">
+    </div>
+
+    <p id="temp"></p>
+    <p id="weather-text"></p>
+    <p id="cName"></p>
+
+    <div class="wind">
+
+      <div class="humid">
+        <i class="fa-solid fa-water" id="humidity-icon"></i>
+        <div>
+          <p id="humidity"></p>
+          <p class="humid-text">Humidity</p>
+        </div>
+      </div>
+
+      <div class="humid">
+        <img src="https://cdn-icons-png.flaticon.com/512/54/54298.png" id="windspeed-icon">
+        <div>
+          <p id="windSpeed"></p>
+          <p class="humid-text">Wind Speed</p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script src="cities.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
