@@ -8,3 +8,4 @@ A collection of beginner to intermediate JavaScript projects.
 - [Rock Paper Scissor](./Projects/Rock%20Paper)
 - [Currency Converter](./Projects/Currency)
 - [Weather App](./Projects/Weather%20App)
+- [Typing Speed Test](./Projects/Typing%20Speed%20Test)
