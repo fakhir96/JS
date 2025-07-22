@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: rgb(97, 153, 202); */
+    background-color: #5b2333;
+}
+
+.container{
+    /* background-color: white; */
+    background-color: #F7F4F3;
+    width: 400px;
+    /* height: 250px; */
+    padding: 20px 20px;
+}
+
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    /* color: rgb(44,155,255); */
+    color: #b24c63;
+}
+
+h1::after{
+    display: block;
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: #242e39;
+    transform: translateX(220%);
+    margin-top: 4px;
+}
+
+blockquote{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: 'Winky Rough', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    color: #5b2333;
+    padding: 0 10px;
+}
+
+#author{
+    text-align: right;
+    color: #555;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+#line{
+    width: 20px;
+    height: 2px;
+    background-color: #242e39;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.buttons{
+    margin-top: 30px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button{
+    padding: 15px 20px;
+    border-radius: 29px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    background-color: #9E2A2B;
+    color: #F7F4F3;
+}
+
+#generate-btn{
+    border: 1px solid black;
+}
+
+#generate-btn:hover{
+    background-color: #a33b3d;
+}
+
+#twitter{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #F7F4F3;
+    color: #9E2A2B;
+    border: 1px solid #9E2A2B;
+}
+
+#twitter:hover{
+    background-color: black;
+    color:#fff;
+}
+
+#twitter i{
+    font-size: 20px;
+    color: rgb(44,155,255);
+}
