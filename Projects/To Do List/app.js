@@ -1,6 +1,16 @@
 const adBtn = document.querySelector("#add")
 const inputVal = document.querySelector("input")
 const ul = document.querySelector(".task-list") 
+const filters = document.querySelectorAll(".trans")
+const clrBtn = document.querySelector("#clear-btn")
+
+filters.forEach(el => {
+    el.addEventListener("click", ()=>{
+        
+        filters.forEach(btn => btn.classList.remove("act"));
+        el.classList.toggle("act");
+    })
+})
 
 // Save data to localStorage
 const saveData = () => {
@@ -95,5 +105,17 @@ const addTask = ()=>{
 }
 
 adBtn.addEventListener("click", addTask)
+
+clrBtn.addEventListener("click", ()=>{
+    ul.innerHTML = ""
+    saveData();
+})
+
+// Add Task When press Enter
+inputVal.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        addTask();
+    }
+});
 
 showTasks()

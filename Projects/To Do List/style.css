@@ -18,7 +18,6 @@ body {
 .container {
   background-color: #000000;
   margin-top: 50px;
-  /* background-color: aquamarine; */
   width: 400px;
   border-radius: 20px;
   padding: 20px 15px;
@@ -84,10 +83,41 @@ input::placeholder {
   color: white;
 }
 
+.filters{
+  margin-top: 10px;
+  margin-left: 11px;
+}
+
+.filters ul{
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  padding: 10px 5px;
+  color: #fff;
+}
+
+.trans{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.trans:hover{
+  cursor: pointer;
+  color: crimson;
+}
+
+.act{
+  color: crimson;
+  text-decoration: underline;
+}
 .task-list {
   list-style: none;
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 0;
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .task-list li {
@@ -98,7 +128,6 @@ input::placeholder {
   align-items: center;
   padding: 10px 15px;
 }
-
 
 .check-icon {
   width: 20px;
@@ -129,10 +158,34 @@ input::placeholder {
   color: white;
   cursor: pointer;
   padding: 6px 12px;
-  /* user-select: none; */
 }
 
 .delete:hover {
   background-color: red;
   border-radius: 50%;
+}
+
+.clear{
+  margin: 10px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear button{
+  padding: 10px 15px;
+  border-radius: 29px;
+  background-color: cornflowerblue;
+  border: 1px solid transparent;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease-out;
+}
+
+.clear button:hover{
+  transform: scale(1.1);
+  background-color: crimson;
+  cursor: pointer;
 }
