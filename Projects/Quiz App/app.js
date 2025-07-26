@@ -118,5 +118,13 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// Add Enter key event listener 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    if ((nextBtn.style.display === "block") && indx < questions.length) {
+      handleNextButton();
+    }
+  }
+});
 // Start the quiz
 startQuiz();
