@@ -9,3 +9,6 @@ A collection of beginner to intermediate JavaScript projects.
 - [Currency Converter](./Projects/Currency)
 - [Weather App](./Projects/Weather%20App)
 - [Typing Speed Test](./Projects/Typing%20Speed%20Test)
+- [Digital Clock](./Projects/Digital%20Clock)
+- [Form Validation](./Projects/Form%20Validation)
+
