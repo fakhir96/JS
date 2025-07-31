@@ -114,8 +114,8 @@ li{
     padding: 1rem 2rem;
     outline: none;
     border: none;
-    color: var(--white);
-    background-color: var(--text-dark);
+    color: var(--text-dark);
+    background-color: var(--white);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -159,7 +159,9 @@ img {
 .header_btn {
     text-align: center;
 }
-
+/* .header_btn .btn{
+    background-color: #ffffff;
+} */
 
 .about_container {
     display: grid;

@@ -28,6 +28,7 @@ const scrollRevealOption = {
 ScrollReveal().reveal(".header_image img", {
     ...scrollRevealOption,
     origin: "right",
+    delay: 200,
 })
 
 ScrollReveal().reveal(".header_content h1", {
