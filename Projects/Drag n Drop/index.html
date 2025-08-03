@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Board</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,22 +22,26 @@
         <div class="board">
             <div class="list" id="list1">
                 <h2>To Do</h2>
-                <div class="card" draggable="true" id="card1">Upload a Project</div>
-                <div class="card" draggable="true" id="card2">Buy Groceries</div>
+                <input type="text" placeholder="+ Add Task" id="todo">
+                <!-- <div class="card" draggable="true" id="card1">Upload a Project <i class="fa-solid fa-square-minus"></i></div> -->
+                <!-- <div class="card" draggable="true" id="card2">Buy Groceries <i class="fa-solid fa-square-minus"></i></div> -->
             </div>
 
             <div class="list" id="list2">
                 <h2>In Progress</h2>
-                <div class="card" draggable="true" id="card3">Learn to code</div>
+                <input type="text" placeholder="+ Add Task" id="process">
+                <!-- <div class="card" draggable="true" id="card3">Learn to code <i class="fa-solid fa-square-minus"></i></div> -->
             </div>
 
             <div class="list" id="list3">
                 <h2>Done</h2>
+                <input type="text" placeholder="+ Add Task" id="done">
             </div>
         </div>
     </div>
 
     <script src="app.js"></script>
+    
 </body>
 
 </html>

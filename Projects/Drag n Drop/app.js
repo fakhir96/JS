@@ -1,10 +1,47 @@
-const cards = document.querySelectorAll(".card");
+// const cards = document.querySelectorAll(".card");
 const lists = document.querySelectorAll(".list");
 
-cards.forEach(card => {
-    card.addEventListener("dragstart", dragStart);
-    card.addEventListener("dragend", dragEnd);
-});
+const input1 = document.querySelector("#todo");
+
+let idCounter = 0;
+
+function addTask(){
+
+    let div = document.createElement("div");
+    const cardId = `card-${idCounter++}`;
+
+    div.classList.add("card");
+    div.setAttribute("id", cardId);
+    div.setAttribute("draggable", "true");
+
+    // Create the text node
+    let taskText = document.createTextNode(input1.value.trim());
+
+    // Create the delete icon
+    let deleteIcon = document.createElement("i");
+    deleteIcon.className = "fa-solid fa-square-minus";
+
+    deleteIcon.addEventListener("click", () => {
+        div.remove();
+    });
+
+    // Build the card
+    div.appendChild(taskText);
+    div.appendChild(deleteIcon);
+
+    div.addEventListener("dragstart", dragStart);
+    div.addEventListener("dragend", dragEnd);
+
+    lists[0].appendChild(div);
+    
+    input1.value = "";
+}
+
+
+// cards.forEach(card => {
+//     card.addEventListener("dragstart", dragStart);
+//     card.addEventListener("dragend", dragEnd);
+// });
 
 lists.forEach(list => {
     list.addEventListener("dragover", dragOver);
@@ -42,3 +79,11 @@ function dragDrop(e) {
     this.classList.remove("over");
 }
 
+// Add Enter key event listener 
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (input1.value != "") {
+        addTask();
+      }
+    }
+});
