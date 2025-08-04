@@ -89,7 +89,7 @@ h1 {
 }
 
 i{
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 i:hover{
     transform: scale(1.5);
