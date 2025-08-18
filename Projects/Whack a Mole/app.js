@@ -1,7 +1,11 @@
+const grid = document.querySelector(".grid");
+
 const holes = document.querySelectorAll(".square");
 const startBtn = document.querySelector("button");
 const scoreDisplay = document.getElementById("score");
 const timerDisplay = document.getElementById("timer");
+const pauseBtn = document.querySelector("#pauseBtn");
+const restartBtn = document.getElementById("restartBtn");
 
 let score = 0;
 let countdownInterval;
@@ -9,6 +13,13 @@ let moleInterval;
 let running = false;
 let lastHole = null;
 let moleSpeed = 1000; // Start with 1 second
+let timeLeft = 30;
+
+const whackSound = new Audio("Whistle.ogg");
+const whackSound2 = new Audio("mac-quack.mp3");
+
+
+grid.classList.add("disable");
 
 // Handle mole click
 holes.forEach(box => {
@@ -17,6 +28,13 @@ holes.forEach(box => {
             score++;
             scoreDisplay.textContent = `Your Score = ${score}`;
             box.classList.remove("mole"); // remove so it can't be clicked again
+            whackSound.currentTime = 0; // reset so it can play again quickly
+            whackSound.play();
+        }
+        else{
+            whackSound2.currentTime = 0; 
+            whackSound2.play();
+
         }
     });
 });
@@ -42,7 +60,7 @@ function showMole() {
 }
 
 function startTimer() {
-    let timeLeft = 30;
+    // let timeLeft = 30;
 
     timerDisplay.textContent = formatTime(timeLeft);
     clearInterval(countdownInterval);
@@ -51,15 +69,15 @@ function startTimer() {
         timeLeft--;
         timerDisplay.textContent = formatTime(timeLeft);
 
-        // if (timeLeft % 5 === 0 && moleSpeed > 400) {
-        //     moleSpeed -= 100; // Speed up game every 5 seconds
-        //     restartMoleInterval();
-        // }
+        if (timeLeft % 5 === 0 && moleSpeed > 400) {
+            moleSpeed -= 100; // Speed up game every 5 seconds
+            restartMoleInterval();
+        }
 
         if (timeLeft <= 0) {
             clearInterval(countdownInterval);
-            stopGame();
             timerDisplay.textContent = "Time's up!";
+            stopGame();
         }
     }, 1000);
 }
@@ -79,6 +97,7 @@ function gameStart() {
     score = 0;
     moleSpeed = 1000;
     scoreDisplay.textContent = `Your Score = ${score}`;
+    grid.classList.remove("disable");
 
     clearInterval(moleInterval);
     clearInterval(countdownInterval);
@@ -90,7 +109,29 @@ function gameStart() {
 function stopGame() {
     running = false;
     clearInterval(moleInterval);
+    clearInterval(countdownInterval);
     holes.forEach(h => h.classList.remove("mole"));
+    grid.classList.add("disable"); // prevent clicking after game ends
 }
 
+function pauseGame(){
+    if(pauseBtn.classList.contains("resume")){
+        running = true;
+        startTimer();  // resume countdown properly
+        restartMoleInterval(); // resume mole spawn
+        grid.classList.remove("disable");
+        pauseBtn.classList.remove("resume");
+        pauseBtn.innerHTML = "Pause";
+    }
+
+    else{
+        running = false;
+        clearInterval(countdownInterval);
+        clearInterval(moleInterval);
+        grid.classList.add("disable");
+        pauseBtn.classList.add("resume");
+        pauseBtn.innerHTML = "Resume";
+    }
+}
 startBtn.addEventListener("click", gameStart);
+pauseBtn.addEventListener("click", pauseGame);

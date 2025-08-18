@@ -51,3 +51,14 @@ button{
     padding: 1rem 2rem;
     color: #fff;
 }
+.disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+.pb{
+    background-color: red;
+
+}
+.resume{
+    background-color: green;
+}
