@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: bisque;
+    overflow: hidden;
+}
+
+.main-container {
+    background-color: white;
+    width: 75%;
+    height: 100vh;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.balance-container {
+    width: 95%;
+    background-color: thistle;
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#balance {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 15px;
+}
+
+.income {
+    background-color: white;
+    padding: 1rem 5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: green;
+    text-align: center;
+}
+
+.income p:last-of-type {
+    font-size: 1.3rem;
+    margin-top: 8px;
+}
+
+.expenses {
+    background-color: white;
+    padding: 1rem 5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: red;
+    text-align: center;
+}
+
+.expenses p:last-of-type {
+    font-size: 1.3rem;
+    margin-top: 8px;
+}
+
+.main-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    margin-top: 10px;
+    height: 60%;
+}
+
+.transactions {
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.transactions h4 {
+    margin: 7px 0;
+    font-weight: 500;
+
+}
+
+.cards {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(231, 247, 248);
+    padding: 10px 15px;
+    margin-bottom: 17px;
+    border-radius: 7px;
+    font-size: 12px;
+    border-right: 4px solid green;
+}
+
+.green {
+    border-right: 4px solid green;
+}
+
+.red {
+    border-right: 4px solid red;
+
+}
+
+.card p:last-of-type {
+    margin-right: 14px;
+}
+
+.input-area {
+    background-color: white;
+}
+
+.input-area h4 {
+    margin: 7px 0;
+    padding: 8px;
+}
+
+form {
+    padding: 8px;
+}
+
+form input {
+    margin-bottom: 18px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background-color: aliceblue;
+}
+
+form input:last-of-type {
+    margin-bottom: 0;
+}
+
+form p {
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+form #ins {
+    margin: 7px 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.btn button {
+    width: 100%;
+    padding: 7px 19px;
+    background-color: green;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}

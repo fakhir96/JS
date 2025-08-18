@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <h1>Expense Tracker</h1>
+
+        <div class="balance-container">
+            <h3>Your Balance</h3>
+            <p id="balance">$0</p>
+
+            <div class="grid">
+
+                <div class="income">
+                    <p>Income</p>
+                    <p id="income-amount">$0</p>
+                </div>
+                <div class="expenses">
+                    <p>Expenses</p>
+                    <p id="expense-amount">$0</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-area">
+            <div class="transactions">
+                <h4><b>Transactions</b></h4>
+
+                <div class="cards"></div>
+            </div>
+
+            <div class="input-area">
+                <h4>Add Transaction</h4>
+
+                <form action="">
+                    <p>Description</p>
+                    <input type="text" id="desc">
+
+                    <p>Amount</p>
+                    <input type="number" id="amount">
+                    <p id="ins">Use (-) for expenses</p>
+
+                    <div class="btn">
+                        <button type="submit">Add Transaction</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
