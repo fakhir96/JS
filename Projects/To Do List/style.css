@@ -8,7 +8,6 @@
 }
 
 body {
-  /* background: linear-gradient(135deg, #153677, #4e085f); */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -18,7 +17,6 @@ body {
 
 .container {
   background-color: #1e1e2f; /* softened dark */
-  /* background-color: #000000; */
   margin-top: 50px;
   width: 400px;
   border-radius: 20px;
@@ -34,7 +32,6 @@ body {
 
 h2 {
   font-weight: 400;
-  /* color: #fff; */
   color: #f5f5f5; /* slightly off-white */
 }
 
@@ -47,7 +44,6 @@ h2 {
   width: 100%;
   border-radius: 50px;
   overflow: hidden;
-  /* background-color: #8904b1; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   background-color: #2c3e50;
@@ -61,25 +57,19 @@ input {
   font-size: 1rem;
   border-radius: 0;
   width: 100%;
-  /* background-color: #8904b1;
-  color: #ffff; */
-
   background-color: #2c3e50;
   color: #f5f5f5;
 }
 
 input::placeholder {
-  /* color: #aaa; */
   color: #b0b0b0;
 }
 
 #add {
   padding: 10px 35px;
-  /* background-color: #0b610b; */
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  /* color: #f1f1f1; */
   border-left: 1px solid transparent;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -90,9 +80,6 @@ input::placeholder {
 }
 
 #add:hover {
-  /* background-color: black;
-  color: white; */
-
   background-color: #1e40af; /* deeper blue on hover */
   color: #ffffff;
 }
@@ -108,7 +95,6 @@ input::placeholder {
   gap: 10px;
   font-size: 15px;
   padding: 10px 5px;
-  /* color: #fff; */
   color: #f0f0f0;
 }
 
@@ -116,18 +102,15 @@ input::placeholder {
   background-color: transparent;
   outline: none;
   border: none;
-  /* color: #fff; */
   color: #f0f0f0;
 }
 
 .trans:hover{
   cursor: pointer;
-  /* color: crimson; */
   color: #3b82f6; /* accent blue on hover */
 }
 
 .act{
-  /* color: crimson; */
   color: #3b82f6; /* accent blue on hover */
   text-decoration: underline;
 }
@@ -135,7 +118,6 @@ input::placeholder {
   list-style: none;
   margin-top: 5px;
   padding: 0;
-  /* background-color: rgba(255, 0, 0, 0.2); */
 }
 
 .task-list li {
@@ -165,12 +147,10 @@ input::placeholder {
 
 .task-text {
   flex-grow: 1;
-  /* color: #01df01; */
   color: #e2e8f0; /* light neutral */
 }
 
 .task-text.checked {
-  /* color: #555; */
   color: #9ca3af; /* soft gray */
   text-decoration: line-through;
 
@@ -178,14 +158,12 @@ input::placeholder {
 
 .delete {
   font-size: 18px;
-  /* color: white; */
   color: #f87171;
   cursor: pointer;
   padding: 6px 12px;
 }
 
 .delete:hover {
-  /* background-color: red; */
   background-color: #dc2626;
   color: #fff;
   border-radius: 50%;
@@ -201,8 +179,6 @@ input::placeholder {
 .clear button{
   padding: 10px 15px;
   border-radius: 29px;
-  /* background-color: cornflowerblue;
-  color: #fff; */
   border: 1px solid transparent;
   outline: none;
   font-weight: 500;
@@ -215,7 +191,6 @@ input::placeholder {
 
 .clear button:hover{
   transform: scale(1.1);
-  /* background-color: crimson; */
   cursor: pointer;
   background-color: #dc2626;
 }
