@@ -1,6 +1,9 @@
 const adBtn = document.querySelector("#add")
 const inputVal = document.querySelector("input")
 const ul = document.querySelector(".task-list") 
+const filters = document.querySelectorAll(".trans")
+const clrBtn = document.querySelector("#clear-btn")
+
 
 // Save data to localStorage
 const saveData = () => {
@@ -94,6 +97,63 @@ const addTask = ()=>{
     
 }
 
+filters.forEach(el => {
+    el.addEventListener("click", ()=>{
+        
+        filters.forEach(btn => btn.classList.remove("act"));
+        el.classList.toggle("act");
+        console.log(el.innerText)
+
+        const allTasks = ul.querySelectorAll("li");
+
+        if(el.innerText === "Completed"){
+           allTasks.forEach(li => {
+            const checkIcon = li.querySelector(".check-icon");
+            if (checkIcon.classList.contains("checked")) {
+                li.style.display = "flex";  // show completed
+            } 
+            else {
+                li.style.display = "none";  // hide incomplete
+            }
+            });
+        }
+        else if (el.innerText === "Active") {
+            allTasks.forEach(li => {
+                const checkIcon = li.querySelector(".check-icon");
+                if (checkIcon.classList.contains("checked")) {
+                    li.style.display = "none";  // hide completed
+                } 
+                else {
+                    li.style.display = "flex";  // show incomplete
+                }
+            });
+        }
+        else { // All
+            allTasks.forEach(li => {
+                li.style.display = "flex";
+            });
+        }
+        saveData();
+    })
+})
+
 adBtn.addEventListener("click", addTask)
+
+clrBtn.addEventListener("click", ()=>{
+    const allTasks = ul.querySelectorAll("li");
+    allTasks.forEach(li => {
+        if (li.style.display !== "none") {
+            ul.removeChild(li);
+        }
+    });
+    saveData();
+})
+
+// Add Task When press Enter
+inputVal.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        addTask();
+    }
+});
 
 showTasks()
