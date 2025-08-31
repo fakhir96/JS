@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Musikalis</h1>
+        </div>
+
+        <ul id="menuList">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Clients</a></li>
+            <li><a href="">Advisor</a></li>
+        </ul>
+
+        <div class="btn">
+            <button id="signup">Sign Up</button>
+        </div>
+        
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+
+        <div class="hero">
+            <h1>Music Is The Shorthand </h1>
+            <div class="cont">
+
+                <div class="left">
+                    <h1>Of Emotion</h1>
+                    <p>It serves as a poignant reminder of the power and depth inherent in every note, melody, and
+                        lyric. It invites visitors to explore the emotional landscapes that music can paint, connecting
+                        them to the very heartbeats of humanity. </p>
+                    <div class="buttons">
+                        <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                        <button>See More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="stats">
+                        <div class="cust">
+                            <p class="number">320K</p>
+                            <p>Customers</p>
+                        </div>
+                        <div class="tracks">
+                            <p class="number">47K</p>
+                            <p>Tracks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="hero-img">
+                        <img src="images/genre-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="genre">
+        <h1>Choose your favourite genre</h1>
+        <p>Dive in, discover, and let the rhythms guide you to your musical paradise. </p>
+
+        <div class="tiles">
+            <div class="tile">
+                <img src="images/genre-2.jpg" alt="">
+                <p>POP</p>
+            </div>
+            <div class="tile">
+                <img src="images/genre-3.jpg" alt="">
+                <p>HIP HOP</p>
+            </div>
+            <div class="tile">
+                <img src="images/genre-4.jpg" alt="">
+                <p>ROCK</p>
+            </div>
+            <div class="tile">
+                <!-- <button class="hover-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></button> -->
+                <img src="images/Dd68yPIk.jpg" alt="">
+                <p>R&B</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="text">
+        <h2>Musikalis is the best music platform ever created, Musikalis aims
+            to give new singers a place to express their work. </h2>
+    </section>
+
+    <section class="feature">
+        <div class="features">
+            <h1>Best Features</h1>
+
+            <div class="card">
+                <div class="card-num">01</div>
+                <div class="card-content">
+                    <h2>The Best Price</h2>
+                    <p>With our commitment to offering the best price, you can indulge in your musical passions without
+                        worrying about your wallet. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">02</div>
+                <div class="card-content">
+                    <h2>Copyright Free</h2>
+                    <p>Our collection boasts an array of copyright-free tracks, ensuring that you can use them in your
+                        projects hassle-free.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-num">03</div>
+                <div class="card-content">
+                    <h2>Copyright Free</h2>
+                    <p>Each track in our curated collection is meticulously crafted to deliver unparalleled sound
+                        clarity and richness. </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feature-img">
+            <img src="images/Ai.jpg" alt="">
+        </div>
+    </section>
+
+
+    <section class="testimonial">
+        <h2>Testimonials from customers</h2>
+        <p id="main">Discover what our customers have to say about their experiences with our music. </p>
+
+        <div class="reviews">
+            <div class="review">
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                </div>
+
+                <p class="review-text">
+                    My workout sessions have reached new heights of intensity and
+                    motivation, all thanks to the invigorating beats and empowering
+                    tracks found on this website.
+                </p>
+
+                <div class="details">
+                    <div class="client-img">
+                        <img src="images/client-1.jpg" alt="">
+                    </div>
+                    <div class="client-text">
+                        <p class="name">David</p>
+                        <p class="profession">Fitness Coach</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                    My workout sessions have reached new heights of intensity and
+                    motivation, all thanks to the invigorating beats and empowering
+                    tracks found on this website.
+                </p>
+
+                <div class="details">
+                    <div class="client-img">
+                        <img src="images/client-4.jpg" alt="">
+                    </div>
+                    <div class="client-text">
+                        <p class="name">Adam</p>
+                        <p class="profession">Music Producer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                </div>
+
+                <p class="review-text">
+                    My workout sessions have reached new heights of intensity and
+                    motivation, all thanks to the invigorating beats and empowering
+                    tracks found on this website.
+                </p>
+
+                <div class="details">
+                    <div class="client-img">
+                        <img src="images/client-1.jpg" alt="">
+                    </div>
+                    <div class="client-text">
+                        <p class="name">David</p>
+                        <p class="profession">Fitness Coach</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                    My workout sessions have reached new heights of intensity and
+                    motivation, all thanks to the invigorating beats and empowering
+                    tracks found on this website.
+                </p>
+
+                <div class="details">
+                    <div class="client-img">
+                        <img src="images/client-1.jpg" alt="">
+                    </div>
+                    <div class="client-text">
+                        <p class="name">David</p>
+                        <p class="profession">Fitness Coach</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="review-text">
+                    My workout sessions have reached new heights of intensity and
+                    motivation, all thanks to the invigorating beats and empowering
+                    tracks found on this website.
+                </p>
+
+                <div class="details">
+                    <div class="client-img">
+                        <img src="images/client-1.jpg" alt="">
+                    </div>
+                    <div class="client-text">
+                        <p class="name">David</p>
+                        <p class="profession">Fitness Coach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="selling">
+        <div class="sell-content">
+            <div class="sell-text">
+                <h2>Start selling your music worldwide today</h2>
+                <p>Expand your reach and monetize your music effortlessly with our worldwide distribution platform,
+                    empowering artists to share their creations on a global scale. </p>
+                <div class="buttons">
+                    <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                    <button>See More <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="sell-img">
+                <img src="images/pexels.jpg" alt="Sell Image">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Advisor</a></li>
+                <li class="footer-logo">
+                    <a href="#" class="logo">Musikalis</a>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-bar">
+            Copyright © 2024 Web Design Mastery. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
