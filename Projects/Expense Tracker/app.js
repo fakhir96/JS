@@ -5,7 +5,8 @@ let expense = document.getElementById("expense-amount");
 let desc = document.getElementById("desc");
 let amount = document.getElementById("amount");
 
-const btn = document.querySelector(".btn button");
+const btn = document.querySelector("#addBtn");
+const clrBtn = document.querySelector("#clear");
 const cards = document.querySelector(".cards");
 
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
@@ -78,10 +79,21 @@ function handleAddTransaction() {
     desc.value = "";
     amount.value = "";
 }
+function clearAll(){
+    cards.innerHTML = "";
+    transactions = [];
+    localStorage.removeItem("transactions");
 
+     balance.innerText = "$0.00";
+     income.innerText = "$0";
+     expense.innerText = "$0";  
+}
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     handleAddTransaction();
 });
 
+clrBtn.addEventListener("click", clearAll);
 init();
+
+
