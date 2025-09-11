@@ -241,13 +241,15 @@ form #ins {
     .main-area {
         grid-template-columns: 1fr;
         height: auto;
-      }
-    
-      .btn {
+    }
+    .main-container{
+        width: 90%;
+    }
+    .btn {
         margin-top: 2rem;
-      }
+    }
 
-      form input{
+    form input{
         width: 100%;
-      }
+    }
 }
