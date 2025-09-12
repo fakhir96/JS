@@ -3,10 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg-color: #f7f9fc;
+    --text-color: #333;
+    --list-bg: #e3e4e8;
+    --card-bg: #fff;
+    --heading-color: #555;
+    --input-bg: #000;
+    --input-text: #fff;
+    --input-placeholder: #c5bdbd;
+  }
 
 body {
     font-family: sans-serif;
-    background-color: #f7f9fc;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +30,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 20px;
     font-size: 2rem;
 }
@@ -36,7 +46,7 @@ h1 {
 }
 
 .list {
-    background-color: #e3e4e8;
+    background-color: var(--list-bg);
     padding: 1rem;
     border-radius: 8px;
     width: 30%;
@@ -45,10 +55,11 @@ h1 {
 }
 
 .list h2 {
-    color: #555;
+    color: var(--heading-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
+
 .board input{
     width: 100%;
     margin-bottom: 1rem;
@@ -57,19 +68,19 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
     outline: none;
-    background-color: #000000;
-    color: white;
+    background-color: var(--input-bg);
+    color: var(--input-text);
 }
 
 .board input::placeholder{
-    color: #c5bdbd;
+    color: var(--input-placeholder);
 }
 .card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    color: #333;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     padding: 1rem;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -94,9 +105,10 @@ i{
 i:hover{
     transform: scale(1.5);
 }
+
 @media (max-width: 768px) {
     .container{
-        margin-top: 1rem; 
+        margin-top: 5rem; 
     }
     .board{
         align-items: center;

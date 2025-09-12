@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        input {
+            outline: none;
+            padding: 1rem;
+            border: 2px solid rebeccapurple;
+        }
+
+        input:focus {
+            border: 2px solid yellow;
+        }
+
+        button {
+            margin-top: 2rem;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="greeting"></h1>
+    <input type="text" placeholder="Enter a name">
+    <button>Save Name</button>
+
+
+    <script>
+        const greeting = document.getElementById("greeting");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+
+        // On page load → check if name is already saved
+        window.addEventListener("DOMContentLoaded", () => {
+            const saved = localStorage.getItem("username");
+            if (saved) {
+                greeting.textContent = `Welcome back, ${saved}! 👋`;
+            } 
+            else {
+                greeting.textContent = "Hello, please enter your name!";
+            }
+        });
+
+        // Save button click → store in localStorage
+        btn.addEventListener("click", () => {
+            const name = input.value.trim();
+            if (name) {
+                localStorage.setItem("username", name);
+                greeting.textContent = `Welcome, ${name}! 🎉`;
+                input.value = "";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

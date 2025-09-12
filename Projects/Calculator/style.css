@@ -4,18 +4,34 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+:root {
+    /* --bg-color: #e3f9ff; */
+    --cal-bg: #3a4452;
+    --input-text: #fff;
+    --ope: aqua;
+    --bg-color: rgb(150, 112, 112);
+}
+  
+body.dark {
+    --bg-color: #0f172a;      /* deep navy background */
+    --cal-bg: #1e293b;        /* dark slate calculator body */
+    --input-text: #f8fafc;    /* soft white for input text */
+    --ope: #38bdf8; 
+}
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #e3f9ff;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.mode{
+    position: absolute;
+    top: 45px;
+}
 .calculator {
-    background-color: #3a4452;
+    background-color: var(--cal-bg);
     padding: 20px;
     border-radius: 10px;
 }
@@ -28,7 +44,7 @@
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
-    color: #fff;
+    color: var(--input-text);
     cursor: pointer;
     margin: 10px;
 }
@@ -51,5 +67,45 @@ form input.equal {
 }
 
 form input.operator {
-    color: aqua;
+    color: var(--ope);
 }
+ /* Toggle container */
+ .toggle {
+    position: relative;
+    width: 65px;
+    height: 34px;
+    background:  #e5e7eb; ; /* light mode background */
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 2px solid #d1d5db; 
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); 
+  }
+
+  /* Hidden checkbox */
+  .toggle input {
+    display: none;
+  }
+
+  /* Slider circle */
+  .slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  /* Checked state (dark mode style) */
+  .toggle input:checked + .slider {
+    transform: translateX(31px);
+    background: #facc15; /* yellow circle for contrast */
+  }
+
+  .toggle input:checked ~ .toggle {
+    background: #1269e4; /* darker track */
+  }

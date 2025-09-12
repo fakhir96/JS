@@ -2,6 +2,20 @@ const display = document.querySelector('input[name="display"]');
 
 const buttons = document.querySelectorAll('input[type="button"]');
 
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+themeToggle.addEventListener("click", () => {
+    if (themeToggle.checked) {
+        // body.classList.remove("light");
+        body.classList.add("dark");
+        // localStorage.setItem("mode", "dark");
+    }
+    else {
+        body.classList.remove("dark");
+        // body.classList.add("light");
+        // localStorage.setItem("mode", "light");
+    }
+});
 function disableButtons() {
     buttons.forEach(btn => {
         if (btn.value !== "AC") {
@@ -34,7 +48,8 @@ buttons.forEach(button => {
             try {
                 // Evaluate the expression and show result
                 display.value = eval(display.value);
-            } catch (error) {
+            } 
+            catch (error) {
                 // Handle invalid expressions (++, ..)
                 display.value = "Error";
                 disableButtons();

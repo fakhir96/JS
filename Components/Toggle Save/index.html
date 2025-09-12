@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Save</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label for="theme" class="theme">
+        <span class="theme__toggle-wrap">
+            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+            </span>
+        </span>
+    </label>
+
+    <script>
+        const themeToggle = document.getElementById("theme");
+        const body = document.body;
+
+        const saved = localStorage.getItem("mode");
+        if (saved) {
+            body.classList.add(saved);
+            themeToggle.checked = saved === "dark";
+        }
+
+    
+        themeToggle.addEventListener("click", () => {
+            if (themeToggle.checked) {
+                body.classList.remove("light");
+                body.classList.add("dark");
+                localStorage.setItem("mode", "dark");
+            }
+            else {
+                body.classList.remove("dark");
+                body.classList.add("light");
+                localStorage.setItem("mode", "light");
+            }
+        });
+    </script>
+</body>
+
+</html>

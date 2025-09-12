@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+.container{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#gameBoard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    /* width: 500px; */
+    max-width: 300px;
+    /* background-color: aqua; */
+    margin-bottom: 2rem;
+}
+.square{
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+#controls, #message{
+    text-align: center;
+    margin: 20px 0;
+}
+#controls input, button{
+    padding: 5px;
+}
